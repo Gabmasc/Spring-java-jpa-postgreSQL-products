@@ -12,7 +12,7 @@ public class CategoriaService {
     @Autowired
     CategoriaRepository categoriaRepository;
 
-    public List<Categoria> getAll(){
+    public List<Categoria> findAll(){
         return categoriaRepository.findAll();
     }
 
