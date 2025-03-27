@@ -3,6 +3,8 @@ package com.products_DatabaseConnective.startUp.entity;
 import com.fasterxml.jackson.annotation.JsonBackReference;
 import jakarta.persistence.*;
 
+import java.util.Set;
+
 @Entity
 @Table(name = "produto")
 public class Produto {
@@ -18,6 +20,28 @@ public class Produto {
     @JoinColumn(name = "categoria_id", referencedColumnName = "categoria_id")
     @JsonBackReference
     private Categoria categoria;
+
+    @ManyToMany
+    @JoinTable(name = "item_pedido",
+    joinColumns = @JoinColumn(name = "produto_id"),
+    inverseJoinColumns = @JoinColumn(name = "pedido_id"))
+    Set<Pedido> pedidos;
+
+    public Set<Pedido> getPedidos() {
+        return pedidos;
+    }
+
+    public void setPedidos(Set<Pedido> pedidos) {
+        this.pedidos = pedidos;
+    }
+
+    public Categoria getCategoria() {
+        return categoria;
+    }
+
+    public void setCategoria(Categoria categoria) {
+        this.categoria = categoria;
+    }
 
     public Integer getProduto_id() {
         return produto_id;
