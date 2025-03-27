@@ -1,6 +1,6 @@
 package com.products_DatabaseConnective.startUp.controller;
 
-import com.products_DatabaseConnective.startUp.models.ProductModel;
+import com.products_DatabaseConnective.startUp.entity.ProductModel;
 import com.products_DatabaseConnective.startUp.productRecordsDTO.ProductDTO;
 import com.products_DatabaseConnective.startUp.repositories.ProductRepositories;
 import jakarta.validation.Valid;

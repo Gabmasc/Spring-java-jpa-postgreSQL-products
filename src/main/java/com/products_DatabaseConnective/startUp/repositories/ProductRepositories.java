@@ -1,6 +1,6 @@
 package com.products_DatabaseConnective.startUp.repositories;
 
-import com.products_DatabaseConnective.startUp.models.ProductModel;
+import com.products_DatabaseConnective.startUp.entity.ProductModel;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

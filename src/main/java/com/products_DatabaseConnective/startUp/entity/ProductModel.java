@@ -1,4 +1,4 @@
-package com.products_DatabaseConnective.startUp.models;
+package com.products_DatabaseConnective.startUp.entity;
 
 import jakarta.persistence.*;
 import org.springframework.hateoas.RepresentationModel;
