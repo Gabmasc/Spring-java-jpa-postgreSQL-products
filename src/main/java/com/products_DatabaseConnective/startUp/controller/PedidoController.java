@@ -48,6 +48,7 @@ public class PedidoController {
             return new ResponseEntity<>(null, HttpStatus.NOT_FOUND);
     }
 
+    @DeleteMapping("/{id}")
     public ResponseEntity<Boolean> deletePedido(@PathVariable Integer id){
         if (pedidoService.deletePedido(id))
             return new ResponseEntity<>(true, HttpStatus.OK);

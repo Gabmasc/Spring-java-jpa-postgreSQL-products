@@ -25,7 +25,7 @@ public class ProdutoController {
             return new ResponseEntity<>(produtos, HttpStatus.NOT_FOUND);
     }
 
-    @GetMapping("{/id}")
+    @GetMapping("/{id}")
     public ResponseEntity<Produto> getById(@PathVariable Integer id){
         Produto produto = produtoService.findById(id);
         if(produto != null )
