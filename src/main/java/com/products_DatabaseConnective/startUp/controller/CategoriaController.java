@@ -35,7 +35,7 @@ public class CategoriaController {
     }
 
     @PostMapping
-    public ResponseEntity<Categoria> saveCategoria(@RequestBody Categoria categoria){
+    public ResponseEntity<Categoria>saveCategoria(@RequestBody Categoria categoria){
         return new ResponseEntity<>(categoriaService.saveCategoria(categoria), HttpStatus.CREATED);
     }
 
@@ -48,6 +48,7 @@ public class CategoriaController {
             return new ResponseEntity<>(null, HttpStatus.NOT_FOUND);
     }
 
+    @DeleteMapping("/{id}")
     public ResponseEntity<Boolean> deleteCategoria(@PathVariable Integer id){
         if(categoriaService.deleteCategoria(id))
             return new ResponseEntity<>(true, HttpStatus.OK);
