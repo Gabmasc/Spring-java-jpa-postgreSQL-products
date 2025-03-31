@@ -11,3 +11,12 @@ spring:
     hibernate:
       ddl-auto: update
     show-sql: true
+
+
+  security:
+    jwt:
+      secret: rertiopjgffdpkfgdkogpokgf
+      Subject: Dados do Usuario
+      company-project-name: Autenticacao de Usuario
+
+
